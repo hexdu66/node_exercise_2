@@ -22,7 +22,7 @@ app.get('/greet', function (req, res) {
     myGreetings[5] = "Hallo !";
     myGreetings[6] = "Salut !";
 
-    console.log(myGreetings[Math.floor((Math.random() * 6))]);
+   res.send(myGreetings[Math.floor((Math.random() * 6))]);
 })
 
 app.get('/greet/:id', function (req, res) {
@@ -36,5 +36,5 @@ app.get('/greet/:id', function (req, res) {
     myGreetings[5] = "Hallo !";
     myGreetings[6] = "Salut !";
 
-    console.log(myGreetings[Math.floor((Math.random() * 6))] + " " +req.params.id);
+    res.send(myGreetings[Math.floor((Math.random() * 6))] + " " +req.params.id);
 })
