@@ -25,6 +25,6 @@ app.get('/greet/:id?', function (req, res) {
     if(!req.params.id)
         res.send(myGreetings[Math.floor((Math.random() * 6))]);
     else
-        res.send(myGreetings[Math.floor((Math.random() * 6))] + " " +req.params.id);
+        res.send(myGreetings[Math.floor((Math.random() * 6))] + " " + req.params.id);
 })
    
